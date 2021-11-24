@@ -1,0 +1,288 @@
+:root {
+  --tmdbDarkBlue: 3, 37, 65;
+  --lightGrey: 227, 227, 227;
+  --tmdbDarkBlue: 3, 37, 65;
+}
+
+$ColorWhite: #fff;
+$tmdbDarkBlue: 3, 37, 65;
+
+body {
+  background: rgba(var(--tmdbDarkBlue), 1);
+}
+.css-hip9hq-MuiPaper-root-MuiAppBar-root {
+  background-color: rgba(3, 37, 65) !important;
+  opacity: 1;
+}
+.bg-theme {
+  background-color: rgba(3, 37, 65) !important;
+  padding: 3rem 0rem;
+}
+.text-white {
+  color: $ColorWhite !important;
+}
+.py-5 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+.p-5 {
+  padding: 3rem;
+}
+.HeaderBar {
+  display: flex;
+  flex-direction: row;
+  height: 64px;
+  padding: 0rem 3rem;
+}
+.w-100 {
+  width: 100% !important;
+}
+@media screen and (max-width: 475px) {
+  .HeaderBar {
+    flex-wrap: wrap;
+    height: 64px;
+    padding: 0.4rem 0rem;
+    margin: 0 !important;
+  }
+  // .css-1t29gy6-MuiToolbar-root {
+  //   padding-left: 0px !important;
+  //   padding-right: 0px !important;
+  // }
+  .Mobile-Navabar {
+    margin-top: 1rem;
+  }
+  .css-cvhtoe-MuiButtonBase-root-MuiListItemButton-root {
+    padding: 0px auto !important;
+    color: white !important;
+  }
+  .css-1nxmd3h-MuiListItem-root {
+    padding: 0px auto !important;
+    color: white !important;
+  }
+  a {
+    text-align: left !important;
+    margin: 1rem 0.4rem !important;
+  }
+  .mobile-bar {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.logoImg {
+  height: 20px;
+  margin: 0rem 2rem;
+  width: 154px;
+}
+// .css-1oqqzyl-MuiContainer-root {
+//   padding-left: 0px !important;
+//   padding-right: 0px !important;
+// }
+.css-46bh2p-MuiCardContent-root {
+  padding: 16px 0.6rem !important;
+}
+.menuLink {
+  padding: 0.5rem 0.5rem !important;
+  font-size: 1em !important;
+  outline: 0;
+  color: inherit;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  white-space: nowrap;
+  cursor: pointer !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+}
+.HeroSection {
+  background-image: linear-gradient(
+      to right,
+      rgba(var(--tmdbDarkBlue), 0.8) 0%,
+      rgba(var(--tmdbDarkBlue), 0) 100%
+    ),
+    url("../../assests/Images/heroImage.jpeg");
+  min-height: 300px;
+  height: calc(100vh / 2.5);
+  text-align: left;
+  max-height: 360px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: flex;
+  padding: 20px 40px;
+}
+
+// --------------Heading Classes Overwrite------------------//
+.css-8oup6q-MuiTypography-root {
+  margin: 0;
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 700 !important;
+  font-size: 3em !important;
+  line-height: 1 !important;
+  letter-spacing: -0.01562em !important;
+  color: initial;
+}
+a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  margin: 0rem 1rem;
+}
+.mt-5 {
+  margin-top: 3rem;
+}
+p {
+  margin-top: 1rem;
+}
+
+// ------------ Card CSS -------------- //
+.css-cnd76u-MuiPaper-root {
+  box-shadow: none !important;
+  background: transparent !important;
+}
+.css-46bh2p-MuiCardContent-root {
+  text-align: left !important;
+  cursor: pointer;
+}
+.css-46bh2p-MuiCardContent-root a {
+  margin: 0px !important;
+}
+.MovieCardImage {
+  height: 280px;
+  width: 100%;
+  cursor: pointer;
+}
+.MovieCardImage img {
+  width: 100%;
+  height: 100%;
+}
+.css-480o17-MuiGrid-root {
+  justify-content: space-between !important;
+}
+.css-bhp9pd-MuiPaper-root-MuiCard-root {
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%) !important;
+  border: 1px solid rgba(var(--lightGrey), 1) !important;
+  border-radius: 8px !important;
+  background-color: #fff !important;
+}
+
+// --------- Accordian Style ---------- //
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root {
+  margin-bottom: 1.5rem !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%) !important;
+  border: 1px solid rgba(var(--lightGrey), 1) !important;
+  background-color: #fff !important;
+}
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root p {
+  font-size: 1.1em !important;
+  font-weight: 600 !important;
+}
+.css-1elwnq4-MuiPaper-root-MuiAccordion-root:before {
+  height: 0px !important;
+}
+.searchButton {
+  font-size: 1.2em;
+  line-height: 1;
+  font-weight: 600;
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: rgba(0, 0, 0, 0.5) !important ;
+  padding: 0.7rem !important;
+  border: 0px !important;
+  border-radius: 4rem;
+}
+
+// Movie Detail Page
+
+div.header.large.first {
+  border-bottom: 1px solid var(--primaryColor);
+  background-position: center;
+  width: 100% !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(
+    to right,
+    rgba(10.59%, 3.53%, 3.14%, 1) 150px,
+    rgba(10.59%, 3.53%, 3.14%, 0.84) 100%
+  );
+}
+div.header {
+  background: linear-gradient(
+    to bottom right,
+    rgba(10.59%, 8.63%, 10.2%, 1),
+    rgba(10.59%, 8.63%, 10.2%, 0.84)
+  );
+}
+
+.inner_content div.custom_bg {
+  background-image: linear-gradient(
+    to right,
+    rgba(10.59%, 8.63%, 10.2%, 1) 150px,
+    rgba(10.59%, 8.63%, 10.2%, 0.84) 100%
+  );
+}
+
+// Input Style Starts here
+
+input {
+  background: white !important;
+  border-radius: 2rem !important;
+  width: 100% !important;
+  margin-bottom: 0px !important;
+}
+.css-1d3z3hw-MuiOutlinedInput-notchedOutline {
+  border: 0px !important;
+}
+.css-1u3bzj6-MuiFormControl-root-MuiTextField-root {
+  width: 100% !important;
+}
+.css-1kty9di-MuiFormLabel-root-MuiInputLabel-root {
+  display: none !important;
+}
+.rounded-5 {
+  border-radius: 8px;
+}
+
+// Person Page CSS
+.PersonCards {
+  height: 340px !important;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 10%) !important;
+  border: 1px solid rgba(var(--lightGrey), 1) !important;
+  border-radius: 8px !important;
+  margin-bottom: 2rem;
+  background-color: #fff !important;
+}
+.PersonCards img {
+  height: 235px !important;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  width: 100% !important;
+}
+.PersonCards a {
+  font-weight: 600;
+  font-size: 1.1em;
+  margin: 0rem !important;
+  color: #000;
+  text-align: left;
+}
+.PersonCards p {
+  font-size: 0.9em;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.6);
+  display: block;
+  margin-top: 0;
+}
