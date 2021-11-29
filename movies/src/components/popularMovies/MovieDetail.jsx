@@ -6,6 +6,7 @@ import Paper from "@mui/material/Paper";
 import cardImg from "../../assests/Images/postImage.jpeg";
 import Button from "@mui/material/Button";
 import Stack from "@mui/material/Stack";
+import { Box } from "@mui/system";
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -34,7 +35,7 @@ const MovieDetail = () => {
         </Stack>
       </div>
       <div className="header large border first py-5">
-        <div className="inner_content custom_bg">
+        <Box className="inner_content custom_bg">
           <Container>
             <Grid container spacing={2}>
               <Grid Item md={5} sm={12} lg={3}>
@@ -62,7 +63,7 @@ const MovieDetail = () => {
               </Grid>
             </Grid>
           </Container>
-        </div>
+        </Box>
       </div>
     </>
   );

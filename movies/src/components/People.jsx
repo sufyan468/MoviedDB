@@ -1,11 +1,12 @@
+import { useState, useEffect } from "react";
+import { fetchPersons } from "../api/index";
 import { WellcomeMsg } from "../views/App/App";
 import { Container } from "@mui/material";
 import { Grid } from "@mui/material";
-import { useState, useEffect } from "react";
-import { fetchPersons } from "../api/index";
 import { styled } from "@mui/material/styles";
 import { Link } from "react-router-dom";
 import Paper from "@mui/material/Paper";
+import { Box } from "@mui/system";
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -26,7 +27,7 @@ const PrivacyPolicy = (titleNew) => {
 
   return (
     <>
-      <div className="w-100 " style={{ margin: "1rem 0rem 4rem 0rem" }}>
+      <Box className="w-100 " style={{ margin: "1rem 0rem 4rem 0rem" }}>
         <Container>
           <WellcomeMsg.Consumer>
             {(titleNew) => {
@@ -34,7 +35,7 @@ const PrivacyPolicy = (titleNew) => {
             }}
           </WellcomeMsg.Consumer>
         </Container>
-      </div>
+      </Box>
 
       <Container>
         <Grid container spacing={5} style={{ justifyContent: "space-between" }}>
@@ -50,10 +51,10 @@ const PrivacyPolicy = (titleNew) => {
                 style={{ width: "100%" }}
               >
                 <img src={countPeolpe.poster} alt={countPeolpe.title} />
-                <div style={{ padding: "0.7rem" }}>
-                  <Link to="/person/Detail">{countPeolpe.name} Jiysa</Link>
+                <box style={{ padding: "0.7rem" }}>
+                  <Link to="/person/Detail">{countPeolpe.name} </Link>
                   <p>{countPeolpe.title}</p>
-                </div>
+                </box>
               </Grid>
             );
           })}

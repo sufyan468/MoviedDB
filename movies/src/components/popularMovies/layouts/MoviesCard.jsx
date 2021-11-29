@@ -1,14 +1,11 @@
-import React from "react";
+import { useState, useEffect } from "react";
+import { fetchMovies } from "../../../api/index";
+import { Link } from "react-router-dom";
 import Card from "@mui/material/Card";
 import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
-// import postImg from "../../../assests/Images/postImage.jpeg";
-import { useState, useEffect } from "react";
-import { fetchMovies } from "../../../api/index";
-// React Router Link
-import { Link } from "react-router-dom";
 import Grid from "@mui/material/Grid";
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -17,6 +14,10 @@ const Item = styled(Paper)(({ theme }) => ({
   textAlign: "center",
   color: theme.palette.text.secondary,
 }));
+const linkStyle = {
+  fontWeight: "700",
+  color: "#000",
+};
 
 const MoviesCard = () => {
   const [topMovies, setTopMovies] = useState([]);
@@ -46,7 +47,7 @@ const MoviesCard = () => {
                   </div>
 
                   <CardContent style={{ height: "9rem" }}>
-                    <a href={""} style={{ fontWeight: "700", color: "#000" }}>
+                    <a href={""} style={linkStyle}>
                       {postItem.title}
                     </a>
                     <p style={{ marginTop: "0px" }}>{postItem.title}</p>

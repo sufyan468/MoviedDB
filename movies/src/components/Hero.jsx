@@ -1,15 +1,17 @@
-import { Grid, Typography, TextField } from "@mui/material";
 import React from "react";
+import { Grid, Typography, TextField } from "@mui/material";
+import { Box } from "@mui/system";
+
+const heading = {
+  color: "white",
+  width: "100%",
+};
 
 const Hero = (props) => {
   return (
     <Grid xs={12} sm={12} md={11} style={{ margin: "auto" }}>
-      <div className="HeroSection">
-        <Typography
-          variant="h1"
-          style={{ color: "white", width: "100%" }}
-          color="initial"
-        >
+      <Box className="HeroSection">
+        <Typography variant="h1" style={heading} color="initial">
           {props.title}.
         </Typography>
         <div className="w-100">
@@ -28,7 +30,7 @@ const Hero = (props) => {
             </Grid>
           </Grid>
         </div>
-      </div>
+      </Box>
     </Grid>
   );
 };
