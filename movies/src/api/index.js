@@ -1,16 +1,11 @@
 import axios from "axios";
-
+const API_BASE_URL = "https://api.themoviedb.org/3";
 const apiKey = "51f0e9434ea11bb6ac972704b0e7f20c";
 
-const url =
-  "https://api.themoviedb.org/3/movie/500?api_key=51f0e9434ea11bb6ac972704b0e7f20c";
-
-const nowPlayingUrl =
-  "https://api.themoviedb.org/3/movie/popular?api_key=51f0e9434ea11bb6ac972704b0e7f20c&language=en-US&page=1";
+const nowPlayingUrl = `${API_BASE_URL}/movie/popular?api_key=${apiKey}&language=en-US&page=1`;
 
 // Upcoming Movie API
-const UpcomingmURL =
-  "https://api.themoviedb.org/3/movie/upcoming?api_key=51f0e9434ea11bb6ac972704b0e7f20c&language=en-US&page=1";
+const UpcomingmURL = `${API_BASE_URL}/movie/upcoming?api_key=${apiKey}&language=en-US&page=1`;
 
 // Movies
 export const fetchMovies = async () => {
@@ -22,8 +17,7 @@ export const fetchMovies = async () => {
         page: 1,
       },
     });
-    const posterUrl =
-      "https://api.themoviedb.org/3/movie/popular?api_key=51f0e9434ea11bb6ac972704b0e7f20c&language=en-US&page=1";
+    const posterUrl = `${API_BASE_URL}/movie/popular?api_key=${apiKey}&language=en-US&page=1`;
     const modifiData = data["results"].map((m) => ({
       id: m["id"],
       backPoster: "https://image.tmdb.org/t/p/original" + m["backdrop_path"],
@@ -47,8 +41,7 @@ export const FetchUpcomingMovie = async () => {
         page: 1,
       },
     });
-    const posterUCUrl =
-      "https://api.themoviedb.org/3/movie/upcoming?api_key=51f0e9434ea11bb6ac972704b0e7f20c&language=en-US&page=1";
+    const posterUCUrl = `${API_BASE_URL}/movie/upcoming?api_key=${apiKey}&language=en-US&page=1`;
     const modifiDataUP = data["results"].map((m) => ({
       id: m["id"],
       backPoster: "https://image.tmdb.org/t/p/original" + m["poster_path"],
@@ -61,8 +54,7 @@ export const FetchUpcomingMovie = async () => {
 };
 
 // Person API Point
-const personUrl =
-  "https://api.themoviedb.org/3/person/popular?api_key=51f0e9434ea11bb6ac972704b0e7f20c&language=en-US&page=1";
+const personUrl = `${API_BASE_URL}/person/popular?api_key=${apiKey}&language=en-US&page=1`;
 
 // Top reated Persons
 export const fetchPersons = async () => {
@@ -74,8 +66,7 @@ export const fetchPersons = async () => {
         page: 1,
       },
     });
-    const persondata =
-      "https://api.themoviedb.org/3/person/popular?api_key=51f0e9434ea11bb6ac972704b0e7f20c&language=en-US&page=1";
+    const persondata = `${API_BASE_URL}/person/popular?api_key=${apiKey}&language=en-US&page=1`;
     const modifiDataP = data["results"].map((m) => ({
       id: m["id"],
       backPoster: "https://image.tmdb.org/t/p/original/" + m["poster_path"],
@@ -88,7 +79,8 @@ export const fetchPersons = async () => {
   } catch (error) {}
 };
 
-export const fetchTopratedMovie = () => {};
-export const fetchMovieDetail = () => {};
-export const fetchCasts = () => {};
-export const fatchSimilarMovie = () => {};
+export const fetchPopularPeople = async () => {
+  const data = await axios.get(UpcomingmURL);
+  console.log("Popular Movies API data", data);
+  return data;
+};

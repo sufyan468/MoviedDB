@@ -4,15 +4,12 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { useState } from "react";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import PopupState, { bindTrigger, bindMenu } from "material-ui-popup-state";
 
 const SearchMovies = () => {
-  const [allData, setAllData] = useState([]);
-
   return (
     <div>
       <Accordion>

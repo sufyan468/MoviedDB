@@ -31,7 +31,7 @@ const MoviesCard = () => {
     <>
       {UpcomingMovies.map((UpItem, index) => {
         return (
-          <Grid xs={12} md={6} lg={2.3} key={index}>
+          <Grid item={true} xs={12} md={6} lg={3} key={index}>
             <Link to="/detail">
               <Item>
                 <Card>

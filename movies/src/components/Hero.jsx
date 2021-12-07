@@ -9,7 +9,7 @@ const heading = {
 
 const Hero = (props) => {
   return (
-    <Grid xs={12} sm={12} md={11} style={{ margin: "auto" }}>
+    <Grid item={true} sm={12} md={11} style={{ margin: "auto" }}>
       <Box className="HeroSection">
         <Typography variant="h1" style={heading} color="initial">
           {props.title}.

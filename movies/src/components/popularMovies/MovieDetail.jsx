@@ -38,7 +38,7 @@ const MovieDetail = () => {
         <Box className="inner_content custom_bg">
           <Container>
             <Grid container spacing={2}>
-              <Grid Item md={5} sm={12} lg={3}>
+              <Grid item={true} md={5} sm={12} lg={3}>
                 <img
                   src={cardImg}
                   alt="Movie Detail"
@@ -48,7 +48,7 @@ const MovieDetail = () => {
                   }}
                 />
               </Grid>
-              <Grid Item md={7} sm={12} lg={9} className="p-5">
+              <Grid item={true} md={7} sm={12} lg={9} className="p-5">
                 <h1 className="text-white">
                   Shang-Chi and the Legend of the Ten Rings (2021)
                 </h1>

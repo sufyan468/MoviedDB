@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { fetchPersons } from "../api/index";
-import { WellcomeMsg } from "../views/App/App";
+import { WellcomeMsg } from "../routes/MainRoutes";
 import { Container } from "@mui/material";
 import { Grid } from "@mui/material";
 import { styled } from "@mui/material/styles";
@@ -38,17 +38,16 @@ const PrivacyPolicy = (titleNew) => {
       </Box>
 
       <Container>
-        <Grid container spacing={5} style={{ justifyContent: "space-between" }}>
+        <Grid container spacing={5}>
           {peoples.map((countPeolpe, index) => {
             return (
               <Grid
-                Item
-                md={4}
-                lg={2.3}
-                sm={8}
-                key={index}
+                item={true}
+                xs={12}
+                md={3}
+                lg={3}
+                key={index.toString}
                 className="PersonCards"
-                style={{ width: "100%" }}
               >
                 <img src={countPeolpe.poster} alt={countPeolpe.title} />
                 <box style={{ padding: "0.7rem" }}>

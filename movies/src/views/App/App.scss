@@ -148,6 +148,7 @@ p {
 .css-cnd76u-MuiPaper-root {
   box-shadow: none !important;
   background: transparent !important;
+  padding: 0px !important;
 }
 .css-46bh2p-MuiCardContent-root {
   text-align: left !important;
@@ -173,6 +174,9 @@ p {
   border: 1px solid rgba(var(--lightGrey), 1) !important;
   border-radius: 8px !important;
   background-color: #fff !important;
+}
+.css-480o17-MuiGrid-root > .MuiGrid-item {
+  padding-top: 0px !important;
 }
 
 // --------- Accordian Style ---------- //
